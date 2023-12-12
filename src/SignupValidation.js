@@ -6,7 +6,8 @@ function validationS(valuess) {
     confirmPassword:""
   }
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  const password_pattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]$/;
+  const password_pattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&].{8,}$/;
+  const passwordIsValid = password_pattern.test(valuess.password);
 
   if (valuess.email === "") {
     errors.email = "Error"
@@ -40,7 +41,7 @@ function validationS(valuess) {
     alert('Please enter a valid email address');
     // return;
   }
-  else if (!password_pattern.test(valuess.password)) {
+  else if (!passwordIsValid) {
     errors.password = "error"
     alert('Password must have at least one lowercase letter, one uppercase letter, one digit and one special character from the set @$!%*?&.');
     // return;
