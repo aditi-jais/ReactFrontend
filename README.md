@@ -1,1 +1,1 @@
-Frontend live url:  https://6577e28ae5dec60ca0f49551--beautiful-starship-6718c9.netlify.app/M
+Frontend live url:  https://65868f9330feee64d5925827--resilient-fenglisu-cb3714.netlify.app/
